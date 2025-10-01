@@ -25,7 +25,7 @@ body { width: 100%; height: 100%; margin: 0; }
 /* правый прямоугольник (картинка) */
 .group-596_1768 { width:648px; height:971px; position:absolute; left:1108px; top:337px; }
 .rectangle-596_1757 { width:100%; height:100%; position:absolute; left:0; top:0;
-  background-image:url(../images/image_block.png); background-size:100% 100%; background-position:center; background-repeat:no-repeat;
+  background-image:url(./images/image_block.png); background-size:100% 100%; background-position:center; background-repeat:no-repeat;
 }
 
 /* средний блок */
@@ -55,7 +55,7 @@ body { width: 100%; height: 100%; margin: 0; }
 .brand-logo { display:block; height:44px; width:auto; }
 
 .frame-596_1717 { width:25.14%; height:100%; position:absolute; left:0; right:74.86%; top:0; bottom:0; }
-.vector-596_1718 { width:100%; height:100%; background-image:url(../image/Vector_596_1718.png); background-size:100% 100%; background-repeat:no-repeat; position:absolute; left:0; right:0; top:0; bottom:0; }
+.vector-596_1718 { width:100%; height:100%; background-image:url(./image/Vector_596_1718.png); background-size:100% 100%; background-repeat:no-repeat; position:absolute; left:0; right:0; top:0; bottom:0; }
 
 .frame-596_836 { width:422.344px; height:50.375px; position:relative; flex-shrink:0; }
 .frame-596_842 { width:235px; position:absolute; left:-15.203px; top:16.984px; display:flex; gap:17px; align-items:center; flex-shrink:1; }
