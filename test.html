@@ -372,8 +372,15 @@ body {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(./image/Rectangle_596_1757.png);
+  background-image: url(./image/image_block.png);
 }
+
+.brand-logo {
+  display: block;
+  height: 44px;   /* подгони под макет */
+  width: auto;    /* чтобы сохранялись пропорции */
+}
+
 
 .group-596_1769 {
   width: 1098px;
@@ -739,7 +746,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
+/*
 body > * {
     width: 100%;
     height: 100%;
@@ -749,9 +756,32 @@ body > * {
     width: 100%;
     height: 100%;
 }
+*/ 
+  </style>
+  <style>
+  /* ---- FIX SCROLL ---- */
+html, body { height: auto !important; }
+body {
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+}
 
+/* не заставляем детей тянуться на всю высоту экрана */
+body > *, .canvas-0_1 > * { height: auto !important; }
+
+/* возвращаем контейнер в поток документа */
+.canvas-0_1 {
+  position: static !important;   /* или relative */
+  height: auto !important;
+  min-height: 100vh;
+}
+
+/* не прячем содержимое — пусть страница растёт и скроллится */
+.frame-596_807 { overflow: visible !important; }
+#596_807 { height:auto !important; }
   </style>
 </head>
+
 <body>
 <div>
   <div id="0_1" class="canvas-0_1">
@@ -829,10 +859,9 @@ body > * {
       <div id="596_820" class="frame-596_820">
         <div id="596_1668" class="frame-596_1668">
           <div id="596_1677" class="group-596_1677">
-            <span id="596_1672" class="text-596_1672">Lightbox</span>
-            <div id="596_1717" class="frame-596_1717">
-              <div id="596_1718" class="vector-596_1718"></div>
-            </div>
+            <div class="group-596_1677" id="596_1677">
+              <img src="./image/logo.png" alt="Lightbox" class="brand-logo">
+            </div>            
           </div>
         </div>
         <div id="596_836" class="frame-596_836">
