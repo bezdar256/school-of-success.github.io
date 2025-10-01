@@ -1,0 +1,76 @@
+/* базовое */
+* { box-sizing: border-box; }
+html { width: 100%; height: 100%; }
+body { width: 100%; height: 100%; margin: 0; }
+
+/* канва и основной фрейм */
+.canvas-0_1 { width:100%; height:100%; position:absolute; left:0; top:0; }
+.frame-596_807 { width:1440px; height:1796px; overflow:hidden; position:relative; flex-shrink:0; background:#fff; }
+
+/* секция формы */
+.frame-596_2073 { width:1351px; position:absolute; left:44px; top:1227px; display:flex; gap:10px; align-items:center; padding:33px 0; overflow:hidden; }
+.frame-596_2044 { position:relative; display:flex; flex-direction:column; gap:26px; padding:20px; flex-grow:1; }
+.text-596_2032 { font-size:40px; font-family:"Playfair Display", serif; font-weight:500; color:#1c1c1e; white-space:pre; }
+.frame-596_2043 { width:486px; display:flex; flex-direction:column; gap:24px; }
+.frame-596_2037, .frame-596_2039, .frame-596_2047 { width:100%; display:flex; flex-direction:column; }
+.frame-596_2038, .frame-596_2040, .frame-596_2048, .frame-596_2076 { width:100%; display:flex; gap:10px; justify-content:center; align-items:center; padding:0 16px; }
+.text-596_2035, .text-596_2041, .text-596_2049, .text-596_2053, .text-596_2056 { font:400 20px Helvetica, Arial, sans-serif; color:rgba(28,28,30,.5); }
+.rectangle-596_2036, .rectangle-596_2042, .rectangle-596_2050, .rectangle-596_2054, .rectangle-596_2058 { width:100%; height:2px; background:rgba(28,28,30,.2); }
+.frame-596_2051 { width:100%; display:flex; }
+.frame-596_2075 { width:243px; display:flex; flex-direction:column; gap:10px; }
+.frame-596_2055 { display:flex; flex-direction:column; gap:10px; justify-content:center; align-items:center; padding-left:8px; flex-grow:1; }
+.frame-596_2066 { width:142px; display:flex; gap:10px; justify-content:center; align-items:center; padding:4px 10px 10px; border-radius:24px; background:#1c1c1e; }
+.text-596_2061 { font:400 20px Helvetica, Arial, sans-serif; text-transform:uppercase; color:#fff; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; }
+
+/* правый прямоугольник (картинка) */
+.group-596_1768 { width:648px; height:971px; position:absolute; left:1108px; top:337px; }
+.rectangle-596_1757 { width:100%; height:100%; position:absolute; left:0; top:0;
+  background-image:url(../images/image_block.png); background-size:100% 100%; background-position:center; background-repeat:no-repeat;
+}
+
+/* средний блок */
+.group-596_1769 { width:1098px; height:650px; position:absolute; left:44px; top:503px; }
+.frame-596_1750 { width:649.58px; position:absolute; right:0; top:458px; display:flex; gap:20px; }
+.frame-596_1739 { width:112px; display:flex; gap:10px; justify-content:center; align-items:center; padding:8px 0; }
+.text-596_1740 { font:400 14px Helvetica, Arial, sans-serif; text-transform:uppercase; color:#1c1c1e; white-space:pre; }
+.frame-596_1747 { width:284px; display:flex; flex-direction:column; }
+.text-596_1741 { font:400 40px Helvetica, Arial, sans-serif; color:#1c1c1e; width:284px; }
+.frame-596_1720 { width:1012.403px; position:absolute; left:50%; top:277px; transform:translateX(calc(-50% + 42.415px)); display:flex; gap:32px; }
+.frame-596_1728 { width:134px; display:flex; gap:10px; justify-content:center; align-items:center; padding:8px 0; }
+.text-596_1721 { font:400 14px Helvetica, Arial, sans-serif; text-transform:uppercase; color:#1c1c1e; }
+.text-596_1722 { font:400 40px Helvetica, Arial, sans-serif; color:#1c1c1e; width:817px; }
+.frame-596_1719 { width:1012.403px; height:192px; position:absolute; left:0; top:0; display:flex; gap:100px; }
+.frame-596_1729 { width:66px; display:flex; gap:10px; justify-content:center; align-items:center; padding:8px 0; }
+.text-596_1695 { font:400 14px Helvetica, Arial, sans-serif; text-transform:uppercase; color:#1c1c1e; white-space:pre; }
+.text-596_1703 { font:400 40px Helvetica, Arial, sans-serif; color:#1c1c1e; width:817px; }
+
+/* заголовок-герой */
+.frame-596_1678 { width:1351px; position:absolute; left:44px; top:83px; display:flex; gap:10px; align-items:center; padding:16px 0; }
+.text-596_808 { font-family:"Playfair Display", serif; font-size:128px; font-weight:500; text-transform:uppercase; color:#1c1c1e; white-space:pre; }
+
+/* хедер */
+.frame-596_820 { width:1351px; position:absolute; left:50%; top:0; transform:translateX(-50%); display:flex; gap:728.75px; align-items:center; padding:16.453px; flex-shrink:1; }
+.frame-596_1668 { width:167px; height:48px; position:relative; flex-shrink:0; }
+.group-596_1677 { width:175px; height:44px; position:absolute; left:-2.953px; top:2.359px; }
+.brand-logo { display:block; height:44px; width:auto; }
+
+.frame-596_1717 { width:25.14%; height:100%; position:absolute; left:0; right:74.86%; top:0; bottom:0; }
+.vector-596_1718 { width:100%; height:100%; background-image:url(../image/Vector_596_1718.png); background-size:100% 100%; background-repeat:no-repeat; position:absolute; left:0; right:0; top:0; bottom:0; }
+
+.frame-596_836 { width:422.344px; height:50.375px; position:relative; flex-shrink:0; }
+.frame-596_842 { width:235px; position:absolute; left:-15.203px; top:16.984px; display:flex; gap:17px; align-items:center; flex-shrink:1; }
+.text-596_837, .text-596_838, .text-596_839 { font:400 14px Helvetica, Arial, sans-serif; text-transform:uppercase; color:#1c1c1e; }
+.text-596_837 { text-decoration:underline; }
+.frame-596_840 { width:155.281px; position:absolute; left:233.063px; top:50%; transform:translateY(-50%); display:flex; padding:16.266px 21.688px 16.109px 21.594px; border-radius:8px; background:#1c1c1e; }
+.text-596_841 { font:400 14px Helvetica, Arial, sans-serif; text-transform:uppercase; color:#fff; text-decoration:underline; }
+
+/* ---- FIX SCROLL ---- */
+html, body { height:auto !important; }
+body { min-height:100vh !important; overflow-y:auto !important; }
+/* не растягиваем детей на всю высоту */
+body > *, .canvas-0_1 > * { height:auto !important; }
+/* возвращаем контейнер в поток */
+.canvas-0_1 { position:static !important; height:auto !important; min-height:100vh; }
+/* не скрываем содержимое */
+.frame-596_807 { overflow:visible !important; }
+#596_807 { height:auto !important; }
