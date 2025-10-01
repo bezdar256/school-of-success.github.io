@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixso HTML</title>
+  <link rel="stylesheet" href="css/font.css">
+  <style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body { 
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+    
+.canvas-0_1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.frame-596_807 {
+  width: 1440px;
+  height: 1796px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.frame-596_2073 {
+  width: 1351px;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  left: 44px;
+  top: 1227px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding: 33px 0px 33px 0px;
+}
+
+.frame-596_2044 {
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 20px 20px 20px 20px;
+  flex-grow: 1;
+}
+
+.text-596_2032 {
+  font-size: 40px;
+  font-family: Playfair Display;
+  font-weight: 500;
+  color: rgba(28, 28, 30, 1);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: pre;
+  flex-grow: 0;
+}
+
+.frame-596_2043 {
+  width: 486px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.frame-596_2037 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-596_2038 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+}
+
+.text-596_2035 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 0.5);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+
+.rectangle-596_2036 {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(28, 28, 30, 0.20000000298023224);
+}
+
+.frame-596_2039 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-596_2040 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+}
+
+.text-596_2041 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 0.5);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+
+.rectangle-596_2042 {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(28, 28, 30, 0.20000000298023224);
+}
+
+.frame-596_2047 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-596_2048 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+}
+
+.text-596_2049 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 0.5);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+
+.rectangle-596_2050 {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(28, 28, 30, 0.20000000298023224);
+}
+
+.frame-596_2051 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.frame-596_2075 {
+  width: 243px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.frame-596_2052 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+}
+
+.text-596_2053 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 0.5);
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-y: hidden;
+  flex-grow: 0;
+}
+
+.rectangle-596_2054 {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(28, 28, 30, 0.20000000298023224);
+}
+
+.frame-596_2055 {
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0px 8px;
+  flex-grow: 1;
+}
+
+.frame-596_2076 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+}
+
+.text-596_2056 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 0.5);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+
+.rectangle-596_2058 {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  flex-shrink: 0;
+  background-color: rgba(28, 28, 30, 0.20000000298023224);
+}
+
+.frame-596_2066 {
+  width: 142px;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px 10px 10px;
+  border-radius: 24px 24px 24px 24px;
+  background-color: rgba(28, 28, 30, 1);
+}
+
+.text-596_2061 {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: pre;
+  flex-grow: 0;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 1),
+        1px -1px 0 rgba(0, 0, 0, 1),
+        -1px 1px 0 rgba(0, 0, 0, 1),
+        1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.group-596_1768 {
+  width: 648.0000610351562px;
+  height: 971px;
+  position: absolute;
+  left: 1108px;
+  top: 337px;
+}
+
+.rectangle-596_1757 {
+  width: 648.0000610351562px;
+  height: 971px;
+  position: absolute;
+  left: 0px;
+  top: 3.637978807091713e-12px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/Rectangle_596_1757.png);
+}
+
+.group-596_1769 {
+  width: 1098px;
+  height: 650px;
+  position: absolute;
+  left: 44px;
+  top: 503px;
+}
+
+.frame-596_1750 {
+  width: 649.5801391601562px;
+  height: auto;
+  position: absolute;
+  right: 0px;
+  top: 458px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.frame-596_1739 {
+  width: 112px;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px 0px;
+}
+
+.text-596_1740 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: pre;
+  flex-grow: 0;
+}
+
+.frame-596_1747 {
+  width: 284px;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-596_1741 {
+  font-size: 40px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 1);
+  width: 284px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-grow: 0;
+}
+
+.frame-596_1720 {
+  width: 1012.4026489257812px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 277px;
+  transform: translateX(calc(-50% + 42.415061950683594px));
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.frame-596_1728 {
+  width: 134px;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px 0px;
+}
+
+.text-596_1721 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: 134px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.text-596_1722 {
+  font-size: 40px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 1);
+  width: 817px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.frame-596_1719 {
+  width: 1012.4026489257812px;
+  height: 192px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.frame-596_1729 {
+  width: 66px;
+  height: auto;
+  position: relative;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px 0px;
+}
+
+.text-596_1695 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: pre;
+  flex-grow: 0;
+}
+
+.text-596_1703 {
+  font-size: 40px;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: rgba(28, 28, 30, 1);
+  width: 817px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.frame-596_1678 {
+  width: 1351px;
+  height: auto;
+  position: absolute;
+  left: 44px;
+  top: 83px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding: 16px 0px 16px 0px;
+}
+
+.text-596_808 {
+  font-size: 128px;
+  font-family: Playfair Display;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: auto;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: pre;
+  flex-grow: 0;
+}
+
+.frame-596_820 {
+  width: 1351px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(calc(-50% + 0px));
+  display: flex;
+  flex-direction: row;
+  gap: 728.75px;
+  align-items: center;
+  padding: 16.453125px 16.453125px 16.453125px 16.453125px;
+  flex-shrink: 1;
+}
+
+.frame-596_1668 {
+  width: 167px;
+  height: 48px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.group-596_1677 {
+  width: 175px;
+  height: 44px;
+  position: absolute;
+  left: -2.953125px;
+  top: 2.359375px;
+}
+
+.text-596_1672 {
+  font-size: 30px;
+  font-family: Helvetica;
+  font-weight: 700;
+  color: rgba(28, 28, 30, 1);
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 48px;
+  top: 0px;
+  white-space: pre;
+  flex-grow: 0;
+}
+
+.frame-596_1717 {
+  width: 25.14%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 74.86%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.vector-596_1718 {
+  width: 100%;
+  height: 100%;
+  background-image: url(./image/Vector_596_1718.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.frame-596_836 {
+  width: 422.34375px;
+  height: 50.375px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.frame-596_842 {
+  width: 235px;
+  height: auto;
+  position: absolute;
+  left: -15.203125px;
+  top: 16.984375px;
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.text-596_837 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: 70px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.text-596_838 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: 48px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.text-596_839 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(28, 28, 30, 1);
+  width: 83px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.frame-596_840 {
+  width: 155.28125px;
+  height: auto;
+  position: absolute;
+  left: 233.0625px;
+  top: 50%;
+  transform: translateY(calc(-50% + 0px));
+  display: flex;
+  flex-direction: row;
+  padding: 16.265625px 21.6875px 16.109375px 21.59375px;
+  flex-shrink: 1;
+  border-radius: 8px 8px 8px 8px;
+  background-color: rgba(28, 28, 30, 1);
+}
+
+.text-596_841 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  width: 112px;
+  height: auto;
+  position: relative;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body > * {
+    width: 100%;
+    height: 100%;
+}
+
+.canvas-0_1 > * {
+    width: 100%;
+    height: 100%;
+}
+
+  </style>
+</head>
+<body>
+<div>
+  <div id="0_1" class="canvas-0_1">
+    <div id="596_807" class="frame-596_807">
+      <div id="596_2073" class="frame-596_2073">
+        <div id="596_2044" class="frame-596_2044">
+          <span id="596_2032" class="text-596_2032">Потратьте деньги прямо сейчас</span>
+          <div id="596_2043" class="frame-596_2043">
+            <div id="596_2037" class="frame-596_2037">
+              <div id="596_2038" class="frame-596_2038">
+                <span id="596_2035" class="text-596_2035">Имя</span>
+              </div>
+              <div id="596_2036" class="rectangle-596_2036"></div>
+            </div>
+            <div id="596_2039" class="frame-596_2039">
+              <div id="596_2040" class="frame-596_2040">
+                <span id="596_2041" class="text-596_2041">Почта</span>
+              </div>
+              <div id="596_2042" class="rectangle-596_2042"></div>
+            </div>
+            <div id="596_2047" class="frame-596_2047">
+              <div id="596_2048" class="frame-596_2048">
+                <span id="596_2049" class="text-596_2049">Номер карты</span>
+              </div>
+              <div id="596_2050" class="rectangle-596_2050"></div>
+            </div>
+            <div id="596_2051" class="frame-596_2051">
+              <div id="596_2075" class="frame-596_2075">
+                <div id="596_2052" class="frame-596_2052">
+                  <span id="596_2053" class="text-596_2053">CVC</span>
+                </div>
+                <div id="596_2054" class="rectangle-596_2054"></div>
+              </div>
+              <div id="596_2055" class="frame-596_2055">
+                <div id="596_2076" class="frame-596_2076">
+                  <span id="596_2056" class="text-596_2056">Срок действия</span>
+                </div>
+                <div id="596_2058" class="rectangle-596_2058"></div>
+              </div>
+            </div>
+          </div>
+          <div id="596_2066" class="frame-596_2066">
+            <span id="596_2061" class="text-596_2061">Потратить</span>
+          </div>
+        </div>
+      </div>
+      <div id="596_1768" class="group-596_1768">
+        <div id="596_1757" class="rectangle-596_1757"></div>
+      </div>
+      <div id="596_1769" style='cursor: pointer;' class="group-596_1769">
+        <div id="596_1750" class="frame-596_1750">
+          <div id="596_1739" class="frame-596_1739">
+            <span id="596_1740" class="text-596_1740">СОДЕРЖАНИЕ <br>КУРСА</span>
+          </div>
+          <div id="596_1747" class="frame-596_1747">
+            <span id="596_1741" class="text-596_1741">Прес качат<br>Бегит<br>Турник<br>Анжуманя</span>
+          </div>
+        </div>
+        <div id="596_1720" class="frame-596_1720">
+          <div id="596_1728" class="frame-596_1728">
+            <span id="596_1721" class="text-596_1721">чему научитесь</span>
+          </div>
+          <span id="596_1722" class="text-596_1722">Честно? Понятия не имеем. <br>Просто листайте к покупке</span>
+        </div>
+        <div id="596_1719" class="frame-596_1719">
+          <div id="596_1729" class="frame-596_1729">
+            <span id="596_1695" class="text-596_1695">О курсе</span>
+          </div>
+          <span id="596_1703" class="text-596_1703">Наш курс самый лучший,<br>и его должны купить все. <br>Он стоит всего $1.000.000, <br>а значит, доступен каждому</span>
+        </div>
+      </div>
+      <div id="596_1678" class="frame-596_1678">
+        <span id="596_808" class="text-596_808">САМЫЙ КРУТОЙ<br>ОНЛАЙН-КУРС</span>
+      </div>
+      <div id="596_820" class="frame-596_820">
+        <div id="596_1668" class="frame-596_1668">
+          <div id="596_1677" class="group-596_1677">
+            <span id="596_1672" class="text-596_1672">Lightbox</span>
+            <div id="596_1717" class="frame-596_1717">
+              <div id="596_1718" class="vector-596_1718"></div>
+            </div>
+          </div>
+        </div>
+        <div id="596_836" class="frame-596_836">
+          <div id="596_842" class="frame-596_842">
+            <span id="596_837" class="text-596_837">Главная</span>
+            <span id="596_838" class="text-596_838">О НАС</span>
+            <span id="596_839" class="text-596_839">КОНТАКТЫ</span>
+          </div>
+          <div id="596_840" class="frame-596_840">
+            <span id="596_841" class="text-596_841">КУПИТЬ КУРС</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const EventManager = {
+  handlers: new Map(),
+  addHandler(element, eventType, handler) {
+    if (!this.handlers.has(element)) {
+      this.handlers.set(element, {
+        boundEvents: new Set(),
+        blockingHandler: (e) => {
+          if (e.target === element || !element.contains(e.target)) {
+            if (!this.handlers.get(element).boundEvents.has(e.type)) {
+              e.stopPropagation();
+            }
+          }
+        }
+      });
+      const allEvents = ['mousedown', 'mouseup', 'click', 'dblclick', 'mouseover', 'mouseout', 'mouseenter', 'mouseleave'];
+      allEvents.forEach(type => {
+        element.addEventListener(type, this.handlers.get(element).blockingHandler, true);
+      });
+    }
+    this.handlers.get(element).boundEvents.add(eventType);
+    element.addEventListener(eventType, handler);
+  }
+};
+
+function handle_596_1769_596_1770(event) {
+  event.stopPropagation();
+  event.preventDefault();
+  setTimeout(() => {
+    const target = document.getElementById('596_1722');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 300);
+}
+
+function initializeEvents() {
+  const element_596_1769 = document.getElementById('596_1769');
+  if (element_596_1769) {
+    EventManager.addHandler(element_596_1769, 'click', handle_596_1769_596_1770);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeEvents);
+} else {
+  initializeEvents();
+}
+</script>
+
+</body>
+</html>
