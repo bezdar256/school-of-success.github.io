@@ -2,74 +2,35 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Helvetica", Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: "Playfair Display", serif;
+  line-height: 1.6;
   background: #fff;
   color: #1c1c1e;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
-main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: disc;
-  margin-top: 10px;
-  padding-left: 20px;
-  text-align: left;
-  display: inline-block;
-}
-
+/* Шапка */
 header {
   background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav {
+  padding: 15px 30px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
-  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 24px;
+  margin-right: 8px;
 }
 
 .menu {
@@ -79,64 +40,169 @@ nav {
 }
 
 .menu li {
-  display: inline-block;
+  display: inline;
 }
 
 .menu a {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #1c1c1e;
   text-decoration: none;
+  color: #1c1c1e;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+.menu a:hover {
+  color: #555;
+}
+
+/* Кнопка "Купить курс" */
 .menu .btn {
   background: #1c1c1e;
   color: #fff;
   padding: 6px 14px;
   border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #1c1c1e;
 }
 
+.menu .btn:hover {
+  background: #fff;
+  color: #1c1c1e;
+  border: 2px solid #1c1c1e;
+}
+
+/* Герой-блок (главная страница) */
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 40px;
-  width: 100%;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
-.hero-content {
+.hero-text {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
-.hero-image {
-  flex: 0 0 40%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
+.hero img {
+  max-width: 400px;
+  height: auto;
   object-fit: cover;
-  border-left: 2px solid #000;
+  align-self: flex-start;
 }
 
+/* Заголовки */
+h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+h3 {
+  margin: 15px 0 8px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Основные секции */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* Формы */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+form input,
+form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: #1c1c1e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #fff;
+  color: #1c1c1e;
+  border: 1px solid #1c1c1e;
+}
+
+/* Футер */
 footer {
-  text-align: center;
+  margin-top: 60px;
   padding: 20px;
-  border-top: 1px solid #ddd;
+  text-align: center;
+  border-top: 1px solid #eee;
   font-size: 14px;
-  margin-top: auto;
+  color: #666;
 }
 
+/* Адаптивность */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  .hero-image {
-    width: 100%;
-    justify-content: center;
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
   }
 }
