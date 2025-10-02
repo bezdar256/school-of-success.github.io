@@ -8,72 +8,98 @@
 </head>
 <body>
 
-  <!-- Шапка -->
+  <!-- Хедер -->
   <header class="header">
     <div class="logo-wrap">
       <img src="images/logo.png" alt="Логотип" class="logo">
     </div>
     <nav class="nav">
-      <ul class="nav-menu">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-        <li><a href="#buy" class="btn">Купить курс</a></li>
+      <ul class="menu">
+        <li><a href="#" class="active">Главная</a></li>
+        <li><a href="#about">О НАС</a></li>
+        <li><a href="#contacts">КОНТАКТЫ</a></li>
+        <li><a href="#buy" class="btn">КУПИТЬ КУРС</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Герой-блок -->
+  <!-- Герой -->
   <section class="hero">
-    <h1>САМЫЙ КРУТОЙ <br> ОНЛАЙН-КУРС</h1>
-    <p>Потратьте деньги прямо сейчас</p>
+    <h1>САМЫЙ КРУТОЙ<br>ОНЛАЙН-КУРС</h1>
+  </section>
 
+  <!-- Картинка справа -->
+  <aside class="course-image">
+    <img src="images/image_block.png" alt="Онлайн-курс">
+  </aside>
+
+  <!-- Блок с описанием -->
+  <section id="about" class="course-content">
+    <article>
+      <h2>О курсе</h2>
+      <p>
+        Наш курс самый лучший, и его должны купить все.<br>
+        Он стоит всего $1.000.000, а значит, доступен каждому.
+      </p>
+    </article>
+
+    <article>
+      <h2>Чему научитесь</h2>
+      <p>
+        Честно? Понятия не имеем.<br>
+        Просто листайте к покупке.
+      </p>
+    </article>
+
+    <article>
+      <h2>Содержание курса</h2>
+      <ul>
+        <li>Прес качат</li>
+        <li>Бегит</li>
+        <li>Турник</li>
+        <li>Анжуманя</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Форма -->
+  <section id="buy" class="payment-section">
+    <h2>Потратьте деньги прямо сейчас</h2>
     <form class="payment-form">
-      <input type="text" placeholder="Имя" required>
-      <input type="email" placeholder="Почта" required>
-      <input type="text" placeholder="Номер карты" required>
+      <label>
+        Имя
+        <input type="text" placeholder="Ваше имя" required>
+      </label>
+
+      <label>
+        Почта
+        <input type="email" placeholder="Ваша почта" required>
+      </label>
+
+      <label>
+        Номер карты
+        <input type="text" placeholder="0000 0000 0000 0000" required>
+      </label>
+
       <div class="form-row">
-        <input type="text" placeholder="CVC" required>
-        <input type="text" placeholder="Срок действия" required>
+        <label>
+          CVC
+          <input type="text" placeholder="123" required>
+        </label>
+        <label>
+          Срок действия
+          <input type="text" placeholder="MM/YY" required>
+        </label>
       </div>
+
       <button type="submit" class="btn">Потратить</button>
     </form>
   </section>
 
-  <!-- Блок с курсом -->
-  <section class="course-content">
-    <h2>Содержание курса</h2>
-    <ul>
-      <li>Пресс качат</li>
-      <li>Бегит</li>
-      <li>Турник</li>
-      <li>Анжуманя</li>
-    </ul>
-
-    <h2>Чему научитесь</h2>
-    <p>Честно? Понятия не имеем. Просто листайте к покупке.</p>
-
-    <h2 id="about">О курсе</h2>
-    <p>Наш курс самый лучший, и его должны купить все. Он стоит всего $1.000.000, а значит, доступен каждому.</p>
-  </section>
-
-  <!-- Подвал -->
+  <!-- Футер -->
   <footer id="contacts" class="footer">
     <p>Контакты: info@school-of-success.ru</p>
   </footer>
 
-  <!-- Скрипт плавного скролла -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const scrollTarget = document.querySelector('.course-content');
-      const clickable = document.querySelector('.course-content h2');
-      if (clickable && scrollTarget) {
-        clickable.addEventListener('click', e => {
-          e.preventDefault();
-          scrollTarget.scrollIntoView({behavior: 'smooth', block: 'start'});
-        });
-      }
-    });
-  </script>
 </body>
 </html>
