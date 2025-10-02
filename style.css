@@ -1,107 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Playfair Display", serif;
   background: #fff;
-  color: #111;
+  color: #1c1c1e;
   line-height: 1.6;
 }
 
-/* Хедер */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+ul, ol {
+  margin: 15px 0 20px 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #1c1c1e;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0077ff;
+}
+
 header {
   background: #fff;
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.logo { height: 40px; }
+
+.logo {
+  height: 40px;
+}
+
 .menu {
   list-style: none;
   display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
+
+.menu li {
+  display: inline-block;
+}
+
 .menu a {
-  text-decoration: none;
-  color: #000;
-  transition: color 0.3s;
+  font-size: 14px;
+  text-transform: uppercase;
 }
-.menu a:hover { color: #0077ff; }
-.btn {
-  background: #000;
+
+.menu .btn {
+  background: #1c1c1e;
   color: #fff;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
-  text-decoration: none;
   transition: background 0.3s;
 }
-.btn:hover { background: #0077ff; }
 
-/* Главный блок */
-.hero {
-  padding: 40px;
+.menu .btn:hover {
+  background: #333;
 }
-.hero h1 {
-  font-size: 42px;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 30px;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
   margin-bottom: 20px;
 }
-.content {
-  display: flex;
-  gap: 40px;
-}
-.image-block img {
-  max-width: 300px;
-  border: 2px solid #000;
+
+.hero-content ul {
+  list-style: disc;
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-/* Форма */
-.form-section {
-  padding: 40px;
-  background: #f9f9f9;
+.hero-image {
+  flex: 0 0 350px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
   border-radius: 8px;
-  margin: 40px;
 }
-.form-section input {
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
+
+.form-section {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 12px;
   border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
-.row {
+
+form .row {
   display: flex;
   gap: 10px;
 }
-button {
-  background: #000;
+
+form .btn {
+  background: #1c1c1e;
   color: #fff;
+  padding: 12px;
   border: none;
-  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-button:hover {
-  background: #0077ff;
-  transform: scale(1.05);
+  transition: background 0.3s;
 }
 
-/* Footer */
+form .btn:hover {
+  background: #333;
+}
+
 footer {
   text-align: center;
   padding: 20px;
   border-top: 1px solid #ddd;
   margin-top: 40px;
+  font-size: 14px;
 }
 
-/* --- Адаптивность --- */
 @media (max-width: 1024px) {
-  .content { flex-direction: column; align-items: center; }
-  .hero h1 { font-size: 32px; }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 20px;
+  }
+  .hero-content h1 {
+    font-size: 42px;
+  }
 }
+
 @media (max-width: 768px) {
-  .menu { flex-direction: column; gap: 10px; }
-  .image-block img { width: 100%; }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero {
+    padding: 30px 20px;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .form-section {
+    margin: 30px 15px;
+  }
 }
