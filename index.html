@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="./images/logo.png" alt="Логотип" class="logo">
-      <ul class="menu">
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo-wrap">
+      <img src="images/logo.png" alt="Логотип" class="logo">
+    </div>
+    <nav class="nav">
+      <ul class="nav-menu">
         <li><a href="#">Главная</a></li>
         <li><a href="#about">О нас</a></li>
         <li><a href="#contacts">Контакты</a></li>
@@ -19,38 +23,57 @@
     </nav>
   </header>
 
+  <!-- Герой-блок -->
   <section class="hero">
-    <h1>Самый крутой онлайн-курс</h1>
-    <p>Прокачай себя и добейся успеха с нами</p>
-    <a href="#buy" class="btn">Записаться</a>
-  </section>
+    <h1>САМЫЙ КРУТОЙ <br> ОНЛАЙН-КУРС</h1>
+    <p>Потратьте деньги прямо сейчас</p>
 
-  <section id="about">
-    <h2>О курсе</h2>
-    <p>Наш курс — это уникальная программа, которая поможет тебе прокачаться во всех сферах жизни. Цена доступна каждому!</p>
-  </section>
-
-  <section id="learn">
-    <h2>Чему вы научитесь</h2>
-    <ul>
-      <li>Качать пресс</li>
-      <li>Бегать правильно</li>
-      <li>Тренироваться на турнике</li>
-      <li>Развивать выносливость</li>
-    </ul>
-  </section>
-
-  <section id="buy">
-    <h2>Запишитесь прямо сейчас</h2>
-    <form>
-      <input type="text" placeholder="Ваше имя" required>
-      <input type="email" placeholder="Ваша почта" required>
-      <button type="submit" class="btn">Отправить</button>
+    <form class="payment-form">
+      <input type="text" placeholder="Имя" required>
+      <input type="email" placeholder="Почта" required>
+      <input type="text" placeholder="Номер карты" required>
+      <div class="form-row">
+        <input type="text" placeholder="CVC" required>
+        <input type="text" placeholder="Срок действия" required>
+      </div>
+      <button type="submit" class="btn">Потратить</button>
     </form>
   </section>
 
-  <footer id="contacts">
+  <!-- Блок с курсом -->
+  <section class="course-content">
+    <h2>Содержание курса</h2>
+    <ul>
+      <li>Пресс качат</li>
+      <li>Бегит</li>
+      <li>Турник</li>
+      <li>Анжуманя</li>
+    </ul>
+
+    <h2>Чему научитесь</h2>
+    <p>Честно? Понятия не имеем. Просто листайте к покупке.</p>
+
+    <h2 id="about">О курсе</h2>
+    <p>Наш курс самый лучший, и его должны купить все. Он стоит всего $1.000.000, а значит, доступен каждому.</p>
+  </section>
+
+  <!-- Подвал -->
+  <footer id="contacts" class="footer">
     <p>Контакты: info@school-of-success.ru</p>
   </footer>
+
+  <!-- Скрипт плавного скролла -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollTarget = document.querySelector('.course-content');
+      const clickable = document.querySelector('.course-content h2');
+      if (clickable && scrollTarget) {
+        clickable.addEventListener('click', e => {
+          e.preventDefault();
+          scrollTarget.scrollIntoView({behavior: 'smooth', block: 'start'});
+        });
+      }
+    });
+  </script>
 </body>
 </html>
