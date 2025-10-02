@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Персонаж</title>
+  <title>Онлайн-курс — Главная</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -13,28 +13,57 @@
     <img src="./images/logo.png" alt="Логотип" class="logo">
     <ul class="menu">
       <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">О персонаже</a></li>
-      <li><a href="works.html">Работы</a></li>
+      <li><a href="about.html">О нас</a></li>
       <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="index.html#buy" class="btn">Купить курс</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section>
-    <h1>Добро пожаловать!</h1>
-    <h2>Это сайт о персонаже поп-культуры</h2>
-    <article>
-      <p>Здесь вы найдете информацию о моём любимом персонаже.  
-      Перейдите в разделы меню, чтобы узнать больше.</p>
-      <img src="./images/hero.jpg" alt="Персонаж" class="hero-img">
-    </article>
+  <section class="hero">
+    <h1>САМЫЙ КРУТОЙ <br> ОНЛАЙН-КУРС</h1>
+    <div class="content">
+      <article class="description">
+        <h2>О курсе</h2>
+        <p>Наш курс самый лучший, и его должны купить все.<br>
+        Он стоит всего $1.000.000, а значит, доступен каждому.</p>
+
+        <h2>Чему научитесь</h2>
+        <p>Честно? Понятия не имеем.<br> Просто листайте к покупке.</p>
+
+        <h3>Содержание курса</h3>
+        <ul>
+          <li>Прес качат</li>
+          <li>Бегит</li>
+          <li>Турник</li>
+          <li>Анжуманя</li>
+        </ul>
+      </article>
+
+      <aside class="image-block">
+        <img src="./images/image_block.png" alt="Изображение курса">
+      </aside>
+    </div>
   </section>
-  <button id="color-btn">Изменить цвет фона</button>
+
+  <section id="buy" class="form-section">
+    <h2>Потратьте деньги прямо сейчас</h2>
+    <form>
+      <input type="text" placeholder="Имя" required>
+      <input type="email" placeholder="Почта" required>
+      <input type="text" placeholder="Номер карты" required>
+      <div class="row">
+        <input type="text" placeholder="CVC" required>
+        <input type="text" placeholder="Срок действия" required>
+      </div>
+      <button type="submit" class="btn">Потратить</button>
+    </form>
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Сайт о персонаже</p>
+  <p>&copy; 2025 Самый крутой онлайн-курс</p>
 </footer>
 </body>
 </html>
