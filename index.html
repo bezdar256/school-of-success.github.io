@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Школа Успеха</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Шапка сайта -->
   <header>
-    <nav>
+    <nav class="navbar">
       <img src="./images/logo.png" alt="Логотип" class="logo">
-      <ul class="menu">
+      <ul class="nav-menu">
         <li><a href="#">Главная</a></li>
         <li><a href="#about">О нас</a></li>
+        <li><a href="#learn">Программа</a></li>
         <li><a href="#contacts">Контакты</a></li>
-        <li><a href="#buy" class="btn">Купить курс</a></li>
+        <li><a href="#buy" class="hero-btn">Купить курс</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Герой-блок -->
   <section class="hero">
     <h1>Самый крутой онлайн-курс</h1>
     <p>Прокачай себя и добейся успеха с нами</p>
-    <a href="#buy" class="btn">Записаться</a>
+    <a href="#buy" class="hero-btn">Записаться</a>
   </section>
 
+  <!-- Блок "О курсе" -->
   <section id="about">
     <h2>О курсе</h2>
-    <p>Наш курс — это уникальная программа, которая поможет тебе прокачаться во всех сферах жизни. Цена доступна каждому!</p>
+    <p>Наша программа поможет тебе прокачаться во всех сферах жизни. 
+       Цена доступна каждому и результат стоит того!</p>
   </section>
 
+  <!-- Блок "Чему вы научитесь" -->
   <section id="learn">
     <h2>Чему вы научитесь</h2>
     <ul>
-      <li>Качать пресс</li>
-      <li>Бегать правильно</li>
-      <li>Тренироваться на турнике</li>
-      <li>Развивать выносливость</li>
+      <li>Эффективные тренировки</li>
+      <li>Сбалансированное питание</li>
+      <li>Правильная техника упражнений</li>
+      <li>Дисциплина и мотивация</li>
     </ul>
   </section>
 
+  <!-- Блок "Запись на курс" -->
   <section id="buy">
     <h2>Запишитесь прямо сейчас</h2>
-    <form>
-      <input type="text" placeholder="Ваше имя" required>
-      <input type="email" placeholder="Ваша почта" required>
-      <button type="submit" class="btn">Отправить</button>
+    <form action="#" method="post" class="signup-form">
+      <label>
+        Ваше имя:
+        <input type="text" name="name" placeholder="Иван" required>
+      </label>
+      <label>
+        Ваша почта:
+        <input type="email" name="email" placeholder="ivan@example.com" required>
+      </label>
+      <button type="submit" class="hero-btn">Отправить</button>
     </form>
   </section>
 
+  <!-- Подвал -->
   <footer id="contacts">
-    <p>Контакты: info@school-of-success.ru</p>
+    <p>Контакты: <a href="mailto:info@school-of-success.ru">info@school-of-success.ru</a></p>
+    <p>&copy; 2025 Школа Успеха</p>
   </footer>
+
 </body>
 </html>
