@@ -2,6 +2,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
+  background: #fff;
+  color: #111;
 }
 
 header {
@@ -14,7 +16,9 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.logo { height: 40px; }
+.logo {
+  height: 40px;
+}
 .menu {
   list-style: none;
   display: flex;
@@ -22,7 +26,10 @@ nav {
   margin: 0;
   padding: 0;
 }
-.menu a { text-decoration: none; color: #000; }
+.menu a {
+  text-decoration: none;
+  color: #000;
+}
 .menu .btn {
   background: black;
   color: white;
@@ -34,6 +41,8 @@ nav {
   display: flex;
   gap: 40px;
   padding: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 .content {
   flex: 1;
@@ -51,7 +60,25 @@ nav {
   left: 20px;
   color: white;
   font-size: 20px;
+  font-weight: bold;
   text-shadow: 0 0 5px black;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+ul {
+  padding-left: 20px;
+}
+section p, section ul {
+  margin: 10px 0;
 }
 
 form {
@@ -67,10 +94,20 @@ form {
 input, button {
   padding: 10px;
   font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 button.btn {
   background: black;
   color: white;
   border: none;
   cursor: pointer;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
 }
