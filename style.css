@@ -16,7 +16,7 @@ header {
   background: #fff;
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Лого слева, меню справа */
   align-items: center;
   border-bottom: 1px solid #eee;
 }
@@ -37,6 +37,7 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin-left: auto; /* меню уезжает вправо */
 }
 
 .menu li {
@@ -192,6 +193,7 @@ footer {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+    margin-left: 0; /* сброс авто-смещения */
   }
 
   h1 {
