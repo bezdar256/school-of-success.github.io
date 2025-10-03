@@ -25,7 +25,6 @@ a { color: inherit; text-decoration: none; }
 }
 h1,h2,h3 { margin: 0 0 .6em; line-height: .95; font-family: "Playfair Display", Georgia, "Times New Roman", serif; font-weight: 600; }
 
-
 h1 { font-size: clamp(48px, 8vw, 120px); letter-spacing: .2px; }
 h2 { font-size: clamp(28px, 3.2vw, 44px); }
 h3 { font-size: clamp(20px, 2vw, 26px); }
@@ -48,15 +47,19 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 .logo img { width: 120px; height: auto; }
 
 /* Nav */
-.main-nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; align-items: center; flex-wrap: nowrap; white-space: nowrap;}
-
-.main-nav a { font-size: 14px; text-transform: uppercase; letter-spacing: .6px; color: #000; opacity: .75;
-   padding-bottom: 4px; border-bottom: 2px solid transparent; transition: opacity .2s, border-color .2s;
-   white-space: nowrap;    /* запретить перенос слов внутри ссылки */
-   word-break: keep-all;   /* не ломать слово на части */}
-
-.main-nav a:hover, .main-nav a.active { opacity: 1; border-color: #999 }
-.main-nav a.active {opacity: 1; border-color: #000;      }
+.main-nav ul {
+  list-style: none; display: flex; gap: 18px; margin: 0; padding: 0;
+  align-items: center; flex-wrap: nowrap; white-space: nowrap;
+}
+.site-header .main-nav a{
+  font-size: 14px; text-transform: uppercase; letter-spacing: .6px; color: #000; opacity: .75;
+  padding-bottom: 6px; border-bottom: 2px solid transparent; transition: opacity .2s, border-color .2s;
+  white-space: nowrap; word-break: keep-all;                /* не рвём слова */
+}
+.site-header .main-nav a:hover { opacity: 1; border-color: #999; }
+.site-header .main-nav a.active { opacity: 1; border-color: #000; } /* подчёркивание текущей страницы */
+/* кнопка в меню не должна подчёркиваться */
+.site-header .main-nav a.btn { border-bottom-color: transparent !important; }
 
 /* CTA pill in header */
 .main-nav .btn { padding: 10px 16px; border-radius: 10e9px; font-size: 12px; font-weight: 600; border: 0; }
@@ -77,7 +80,7 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 .hero { padding: 36px 0 28px; position: relative; overflow: hidden; }
 .hero-grid {
   display: grid; align-items: start; gap: 28px;
-  grid-template-columns: 1.1fr .9fr;   
+  grid-template-columns: 1.1fr .9fr;
 }
 .hero-content { padding-top: 20px; }
 .hero-content p { max-width: 560px; font-size: 18px; color:#111; }
@@ -86,18 +89,16 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 .hero-image { position: relative; min-height: 380px; }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; }
 
-/* диагональная штриховка справа (для овэрлей эффекта) */
+/* диагональная штриховка справа (overlay) */
 .hero-image::after{
   content:""; position:absolute; inset:0;
   background-image: repeating-linear-gradient( -25deg, rgba(0,0,0,.8) 0 12px, transparent 12px 28px );
   mix-blend-mode: multiply; opacity:.45;
 }
 
-/*  Features (краткие пункты)  */
+/*  Features  */
 .features { padding: 20px 0 8px; }
-.cards {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-}
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .card { background:#fff; border: 0; padding: 16px 8px; }
 .card h3 { margin-bottom: .4em; }
 .card p { color:#222; }
@@ -130,10 +131,13 @@ input.invalid{ border-bottom-color:#d33; }
 .site-footer { border-top: 2px solid #2b2b2b; background:#fff; }
 .footer-inner {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 0; gap: 16px;
+  padding: 16px 0; gap: 16px; flex-wrap: wrap;           /* разрешаем перенос строк */
 }
-.footer-nav { display: flex; gap: 16px; }
-.footer-nav a { color:#000; opacity:.75; text-transform: none; }
+.footer-nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-nav a {
+  color:#000; opacity:.75; text-transform: none;
+  white-space: nowrap; word-break: keep-all;             /* чтобы не рвались ссылки*/
+}
 .footer-nav a:hover { opacity:1; }
 
 /*  Contacts / Secret  */
@@ -141,38 +145,38 @@ input.invalid{ border-bottom-color:#d33; }
 .checklist { margin: 0; padding-left: 18px; }
 
 /* секретная большая кнопка по макету — внизу экрана на мобайле */
-.secret-btn {
-  font-size: 14px; letter-spacing: .3px;
-}
-
-
+.secret-btn { font-size: 14px; letter-spacing: .3px; }
 
 /*  Mobile first (≤ 768px)  */
 @media (max-width: 768px) {
   .container { width: min(100% - 28px, 720px); }
 
-  .header-inner { padding: 12px 0; }
+  .header-inner {
+    padding: 12px 0;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; row-gap: 8px;                      /* если тесно — nav на строку ниже */
+  }
   .logo img { width: 104px; }
 
-  .main-nav a { font-size: 12px; }
-  .main-nav .btn { padding: 9px 14px; }
   .main-nav ul {
-    overflow-x: auto;           /* прокрутка по горизонтали */
-    -webkit-overflow-scrolling: touch;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    gap: 12px; padding-bottom: 2px;
   }
+  .site-header .main-nav a { font-size: 12px; letter-spacing: .4px; }
+  .main-nav .btn { padding: 9px 14px; font-size: 12px; white-space: nowrap; flex: 0 0 auto; }
 
   .hero { padding-top: 22px; padding-bottom: 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 12px; }
   .hero-content { padding-top: 0; }
   h1 { font-size: clamp(36px, 10vw, 52px); }
 
-  /* нижняя диагональная полоса как на скрине мобильной главной */
+  /* нижняя диагональная полоса как на мобильном скрине */
   .hero::after{
     content:""; display:block; width:100%; height:80px;
     background-image: repeating-linear-gradient( -25deg, rgba(0,0,0,.8) 0 12px, transparent 12px 28px );
     margin-top: 18px; opacity:.5;
   }
-  .hero-image { min-height: 0; height: 0; } /* изображение уходит, остаётся полоса */
+  .hero-image { min-height: 0; height: 0; }
   .hero-image img { display:none; }
 
   .cards { grid-template-columns: 1fr; }
