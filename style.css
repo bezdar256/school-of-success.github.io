@@ -59,7 +59,7 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 .site-header .main-nav a:hover { opacity: 1; border-color: #999; }
 .site-header .main-nav a.active { opacity: 1; border-color: #000; } /* подчёркивание текущей страницы */
 /* кнопка в меню не должна подчёркиваться */
-.site-header .main-nav a.btn { border-bottom-color: transparent !important; color: #fff !important; background: #111;}
+.site-header .main-nav a.btn { border-bottom-color: transparent !important; color: #fff !important; background: #111; opacity: 1 !important;}
 
 /* CTA pill in header */
 .main-nav .btn { padding: 10px 16px; border-radius: 10e9px; font-size: 12px; font-weight: 600; border: 0; }
