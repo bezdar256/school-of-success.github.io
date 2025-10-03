@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О нас — Онлайн-курс</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>О нас — Курс</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="О нас." />
 </head>
 <body>
-<header>
-  <div class="logo">
-    <img src="./images/logo.png" alt="Логотип">
-    Школа Успеха
-  </div>
-  <ul class="menu">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="about.html">О нас</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="buy.html" class="btn">Купить курс</a></li>
-  </ul>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Lightbox" />
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a class="active" href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="index.html#buy" class="btn">Купить курс</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container page">
+    <h1>О НАС</h1>
+    <p class="aside-note">Кто мы</p>
+    <p style="max-width:640px">
+      Пока не придумали.<br/>
+      Но нам можно доверять, это точно
+    </p>
+  </main>
 
-<main>
-  <section>
-    <h1>О нас</h1>
-    <h2>Кто мы?</h2>
-    <p>Пока не придумали.<br> Но нам можно доверять, это точно.</p>
-  </section>
-</main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Курс. Все права защищены.</p>
+      <nav class="footer-nav">
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
 
-<footer>
-  <p>&copy; 2025 Самый крутой онлайн-курс</p>
-</footer>
+  <script src="script.js"></script>
 </body>
 </html>
