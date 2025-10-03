@@ -12,11 +12,16 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
+
 :root{
   --black:#111;
   --gray:#8c8c8c;
   --light:#f4f4f4;
   --container: 1200px;
+
+  /* для CTA-кнопки */
+  --accent:#111;
+  --accent-contrast:#fff;
 }
 
 /*  Typography  */
@@ -52,17 +57,42 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
   align-items: center; flex-wrap: nowrap; white-space: nowrap;
 }
 .site-header .main-nav a{
-  font-size: 14px; text-transform: uppercase; letter-spacing: .6px; color: #000; opacity: .75;
+  font-size: 14px; text-transform: uppercase; letter-spacing: .6px;
   padding-bottom: 6px; border-bottom: 2px solid transparent; transition: opacity .2s, border-color .2s;
-  white-space: nowrap; word-break: keep-all;                /* не рвём слова */
+  white-space: nowrap; word-break: keep-all;
 }
-.site-header .main-nav a:hover { opacity: 1; border-color: #999; }
-.site-header .main-nav a.active { opacity: 1; border-color: #000; } /* подчёркивание текущей страницы */
-/* кнопка в меню не должна подчёркиваться */
-.site-header .main-nav a.btn { border-bottom-color: transparent !important; color: #fff !important; background: #111; opacity: 1 !important;}
+
+/* обычные ссылки (кроме кнопки) */
+.site-header .main-nav a:not(.btn){ color:#000; opacity:.75; }
+.site-header .main-nav a:not(.btn):hover { opacity: 1; border-color: #999; }
+.site-header .main-nav a:not(.btn).active { opacity: 1; border-color: #000; }
+
+/* кнопка "КУПИТЬ КУРС" */
+.site-header .main-nav a.btn {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-bottom-color: transparent;
+  opacity: 1;
+  -webkit-text-fill-color: var(--accent-contrast);
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.site-header .main-nav a.btn:hover,
+.site-header .main-nav a.btn:focus-visible {
+  background: var(--accent-contrast);
+  color: var(--accent);
+  -webkit-text-fill-color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
 
 /* CTA pill in header */
-.main-nav .btn { padding: 10px 16px; border-radius: 10e9px; font-size: 12px; font-weight: 600; border: 0; }
+.main-nav .btn {
+  padding: 10px 16px;
+  border-radius: 10e9px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 0;
+}
 
 /*  Buttons  */
 .btn {
@@ -73,8 +103,8 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 }
 .btn.primary { background:#111; color:#fff; }
 .btn.primary:hover { transform: translateY(-1px); }
-.btn.ghost { background:#fff; color:#111; border-color:#111; }
-.btn.ghost:hover { background:#111; color:#fff; }
+.btn.ghost { background:#fff; color:var(--accent); border-color:var(--accent); }
+.btn.ghost:hover { background:var(--accent); color:#fff; }
 
 /*  Hero  */
 .hero { padding: 36px 0 28px; position: relative; overflow: hidden; }
@@ -89,7 +119,7 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 .hero-image { position: relative; min-height: 380px; }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; }
 
-/* диагональная штриховка справа (overlay) */
+/* диагональная штриховка справа */
 .hero-image::after{
   content:""; position:absolute; inset:0;
   background-image: repeating-linear-gradient( -25deg, rgba(0,0,0,.8) 0 12px, transparent 12px 28px );
@@ -131,12 +161,12 @@ input.invalid{ border-bottom-color:#d33; }
 .site-footer { border-top: 2px solid #2b2b2b; background:#fff; }
 .footer-inner {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 0; gap: 16px; flex-wrap: wrap;           /* разрешаем перенос строк */
+  padding: 16px 0; gap: 16px; flex-wrap: wrap;
 }
 .footer-nav { display: flex; gap: 16px; flex-wrap: wrap; }
 .footer-nav a {
   color:#000; opacity:.75; text-transform: none;
-  white-space: nowrap; word-break: keep-all;             /* чтобы не рвались ссылки*/
+  white-space: nowrap; word-break: keep-all;
 }
 .footer-nav a:hover { opacity:1; }
 
@@ -144,7 +174,7 @@ input.invalid{ border-bottom-color:#d33; }
 .page p { font-size: clamp(16px, 1.7vw, 20px); }
 .checklist { margin: 0; padding-left: 18px; }
 
-/* секретная большая кнопка по макету — внизу экрана на мобайле */
+/* секретная большая кнопка */
 .secret-btn { font-size: 14px; letter-spacing: .3px; }
 
 /*  Mobile first (≤ 768px)  */
@@ -154,7 +184,7 @@ input.invalid{ border-bottom-color:#d33; }
   .header-inner {
     padding: 12px 0;
     display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; row-gap: 8px;                      /* если тесно — nav на строку ниже */
+    flex-wrap: wrap; row-gap: 8px;
   }
   .logo img { width: 104px; }
 
@@ -170,7 +200,6 @@ input.invalid{ border-bottom-color:#d33; }
   .hero-content { padding-top: 0; }
   h1 { font-size: clamp(36px, 10vw, 52px); }
 
-  /* нижняя диагональная полоса как на мобильном скрине */
   .hero::after{
     content:""; display:block; width:100%; height:80px;
     background-image: repeating-linear-gradient( -25deg, rgba(0,0,0,.8) 0 12px, transparent 12px 28px );
@@ -182,7 +211,6 @@ input.invalid{ border-bottom-color:#d33; }
   .cards { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 
-  /* секретная кнопка */
   .secret-btn.btn {
     position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60;
     padding: 18px 20px; border-radius: 20px; background:#111; color:#fff;
@@ -190,7 +218,7 @@ input.invalid{ border-bottom-color:#d33; }
     box-shadow: 0 10px 24px rgba(0,0,0,.18);
   }
 
-  .page { padding-bottom: 120px; } /* чтобы контент не перекрывался фикс-кнопкой */
+  .page { padding-bottom: 120px; }
 }
 
 /* Tablet / small desktop (769–1199px) */
@@ -208,6 +236,3 @@ input.invalid{ border-bottom-color:#d33; }
 
 
 .aside-note { color:#9a9a9a; font-size:12px; letter-spacing:.5px; text-transform: uppercase; }
-
-
-.main-nav .btn { background:#111; color:#fff; }
