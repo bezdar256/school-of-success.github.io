@@ -18,10 +18,6 @@ a { color: inherit; text-decoration: none; }
   --gray:#8c8c8c;
   --light:#f4f4f4;
   --container: 1200px;
-
-  /* для CTA-кнопки */
-  --accent:#111;
-  --accent-contrast:#fff;
 }
 
 /*  Typography  */
@@ -62,37 +58,43 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
   white-space: nowrap; word-break: keep-all;
 }
 
-/* обычные ссылки (кроме кнопки) */
+/* обычные ссылки */
 .site-header .main-nav a:not(.btn){ color:#000; opacity:.75; }
 .site-header .main-nav a:not(.btn):hover { opacity: 1; border-color: #999; }
 .site-header .main-nav a:not(.btn).active { opacity: 1; border-color: #000; }
 
-/* кнопка "КУПИТЬ КУРС" */
+/* кнопка "КУПИТЬ КУРС": всегда чёрная */
 .site-header .main-nav a.btn {
-  background: var(--accent);
-  color: var(--accent-contrast);
+  background: #111;
+  color: #fff;
   border-bottom-color: transparent;
   opacity: 1;
-  -webkit-text-fill-color: var(--accent-contrast);
-  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+  -webkit-text-fill-color: #fff;
+  transition: background-color .15s ease, color .15s ease;
 }
-.site-header .main-nav a.btn:hover,
-.site-header .main-nav a.btn:focus-visible {
-  background: var(--accent-contrast);
-  color: var(--accent);
-  -webkit-text-fill-color: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+
+/* На компьютерах — инверсия при hover */
+@media (hover: hover) and (pointer: fine) {
+  .site-header .main-nav a.btn:hover,
+  .site-header .main-nav a.btn:focus-visible {
+    background: #fff;
+    color: #111;
+    -webkit-text-fill-color: #111;
+    border-color: #111;
+  }
+}
+
+/* На мобильных — инверсия только во время нажатия */
+@media (hover: none) and (pointer: coarse) {
+  .site-header .main-nav a.btn:active {
+    background: #fff;
+    color: #111;
+    -webkit-text-fill-color: #111;
+  }
 }
 
 /* CTA pill in header */
-.main-nav .btn {
-  padding: 10px 16px;
-  border-radius: 10e9px;
-  font-size: 12px;
-  font-weight: 600;
-  border: 0;
-}
+.main-nav .btn { padding: 10px 16px; border-radius: 10e9px; font-size: 12px; font-weight: 600; border: 0; }
 
 /*  Buttons  */
 .btn {
@@ -103,8 +105,8 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 }
 .btn.primary { background:#111; color:#fff; }
 .btn.primary:hover { transform: translateY(-1px); }
-.btn.ghost { background:#fff; color:var(--accent); border-color:var(--accent); }
-.btn.ghost:hover { background:var(--accent); color:#fff; }
+.btn.ghost { background:#fff; color:#111; border-color:#111; }
+.btn.ghost:hover { background:#111; color:#fff; }
 
 /*  Hero  */
 .hero { padding: 36px 0 28px; position: relative; overflow: hidden; }
@@ -119,7 +121,6 @@ h3 { font-size: clamp(20px, 2vw, 26px); }
 .hero-image { position: relative; min-height: 380px; }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; }
 
-/* диагональная штриховка справа */
 .hero-image::after{
   content:""; position:absolute; inset:0;
   background-image: repeating-linear-gradient( -25deg, rgba(0,0,0,.8) 0 12px, transparent 12px 28px );
