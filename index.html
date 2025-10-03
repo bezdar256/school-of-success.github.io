@@ -1,72 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Онлайн-курс — Главная</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Главная — Курс</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Самый крутой онлайн-курс. Потратьте деньги прямо сейчас." />
 </head>
 <body>
-<header>
-  <div class="logo">
-    <img src="./images/logo.png" alt="Логотип">
-    Школа Успеха
-  </div>
-  <ul class="menu">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="about.html">О нас</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="buy.html" class="btn">Купить курс</a></li>
-  </ul>
-</header>
-
-
-<main>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>САМЫЙ КРУТОЙ <br> ОНЛАЙН-КУРС</h1>
-
-      <article class="description">
-        <h2>О курсе</h2>
-        <p>Наш курс самый лучший, и его должны купить все.<br>
-        Он стоит всего $1.000.000, а значит, доступен каждому.</p>
-
-        <h2>Чему научитесь</h2>
-        <p>Честно? Понятия не имеем.<br> Просто листайте к покупке.</p>
-
-        <h3>Содержание курса</h3>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Lightbox" />
+      </a>
+      <nav class="main-nav">
         <ul>
+          <li><a class="active" href="index.html">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="index.html#buy" class="btn">Купить курс</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>САМЫЙ КРУТОЙ<br/>ОНЛАЙН-КУРС</h1>
+
+        <p class="aside-note">О курсе</p>
+        <p>
+          Наш курс самый лучший,<br/>
+          и его должны купить все.<br/>
+          Он стоит всего $1.000.000,<br/>
+          а значит, доступен каждому
+        </p>
+
+        <p class="aside-note" style="margin-top:22px;">Чему научитесь</p>
+        <p>
+          Честно? Понятия не имеем.<br/>
+          Просто листайте к покупке
+        </p>
+
+        <p class="aside-note" style="margin-top:22px;">Содержание курса</p>
+        <ul style="margin:0; padding-left:20px;">
           <li>Прес качат</li>
           <li>Бегит</li>
           <li>Турник</li>
           <li>Анжуманя</li>
         </ul>
-      </article>
-    </div>
-
-    <aside class="hero-image">
-      <img src="./images/image_block.png" alt="Изображение курса">
-    </aside>
-  </section>
-
-  <section id="buy" class="form-section">
-    <h2>Потратьте деньги прямо сейчас</h2>
-    <form>
-      <input type="text" placeholder="Имя" required>
-      <input type="email" placeholder="Почта" required>
-      <input type="text" placeholder="Номер карты" required>
-      <div class="row">
-        <input type="text" placeholder="CVC" required>
-        <input type="text" placeholder="Срок действия" required>
       </div>
-      <button type="submit" class="btn">Потратить</button>
-    </form>
-  </section>
-</main>
 
-<footer>
-  <p>&copy; 2025 Самый крутой онлайн-курс</p>
-</footer>
+      <div class="hero-image">
+        <img src="images/image_block.png" alt="Графический блок" />
+      </div>
+    </div>
+  </section>
+
+  <section id="buy" class="buy">
+    <div class="container">
+      <h2>Потратьте деньги прямо сейчас</h2>
+      <!--
+      <form id="buy-form" class="buy-form" novalidate>
+        <div class="form-row">
+          <label>
+            Имя
+            <input type="text" name="name" placeholder="Иван Иванов" autocomplete="name" required />
+          </label>
+          <label>
+            Почта
+            <input type="email" name="email" placeholder="name@example.com" autocomplete="email" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="full">
+            Номер карты
+            <input type="text" name="card" placeholder="0000 0000 0000 0000" inputmode="numeric"
+                   pattern="[0-9\s]{12,23}" autocomplete="cc-number" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            CVC
+            <input type="text" name="cvc" placeholder="CVC" inputmode="numeric"
+                   pattern="[0-9]{3,4}" autocomplete="cc-csc" required />
+          </label>
+          <label>
+            Срок (MM/YY)
+            <input type="text" name="exp" placeholder="MM/YY" inputmode="numeric"
+                   pattern="(0[1-9]|1[0-2])\/\d{2}" autocomplete="cc-exp" required />
+          </label>
+        </div>
+        <button type="submit" class="btn primary">Потратить</button>
+        <p class="form-note">Данные карты передаются по защищённому соединению.</p>
+      </form>
+      -->
+      <form id="buy-form" class="buy-form" autocomplete="on" novalidate>
+        <div class="form-row">
+          <label>
+            Имя
+            <input type="text" name="name" placeholder="Иван Иванов"
+                   autocomplete="name" required />
+          </label>
+          <label>
+            Почта
+            <input type="email" name="email" placeholder="name@example.com"
+                   autocomplete="email" required />
+          </label>
+        </div>
+      
+        <!-- Владелец карты: ключевой для подсказок -->
+        <div class="form-row">
+          <label class="full">
+            Владелец карты
+            <input type="text" name="cardholder"
+                   placeholder="IVAN IVANOV"
+                   autocomplete="cc-name" required />
+          </label>
+        </div>
+      
+        <div class="form-row">
+          <label class="full">
+            Номер карты
+            <input type="text" name="card"
+                   placeholder="0000 0000 0000 0000"
+                   inputmode="numeric" pattern="[0-9\s]{12,23}"
+                   autocomplete="cc-number" required />
+          </label>
+        </div>
+      
+        <div class="form-row">
+          <label>
+            CVC
+            <input type="text" name="cvc" placeholder="CVC"
+                   inputmode="numeric" pattern="[0-9]{3,4}"
+                   autocomplete="cc-csc" required />
+          </label>
+      
+          <label>
+            Срок (MM/YY)
+            <div style="display:flex; gap:8px;">
+              <input type="text" name="exp-month" placeholder="MM"
+                     inputmode="numeric" pattern="(0[1-9]|1[0-2])"
+                     maxlength="2" autocomplete="cc-exp-month" required />
+              <input type="text" name="exp-year" placeholder="YY"
+                     inputmode="numeric" pattern="\d{2}" maxlength="2"
+                     autocomplete="cc-exp-year" required />
+            </div>
+          </label>
+        </div>
+      
+        <button type="submit" class="btn primary">Потратить</button>
+        <p class="form-note">Данные карты передаются по защищённому соединению.</p>
+      </form>
+      
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Курс. Все права защищены.</p>
+      <nav class="footer-nav">
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
